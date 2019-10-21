@@ -1,4 +1,4 @@
-﻿using namespace std;
+using namespace std;
 
 #include <iostream>
 #include <string>
@@ -15,10 +15,10 @@ int main()
 	cin >> C;
 	l = S.size();
 	cout << "Измененная строка: ";
-	for (i = 0; i < l; i++) {
+	for (i = l - 1; i >= 0; i--) {
 		if (S[i] == C) {
-			cout << C;
+			S.insert(i, 1, C);
 		};
-		cout << S[i];
 	};
+	cout << S;
 }
